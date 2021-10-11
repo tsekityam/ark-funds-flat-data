@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - .github/workflows/flat.yml
+      - ./postprocess.js
 jobs:
   scheduled:
     runs-on: ubuntu-latest
@@ -20,47 +21,55 @@ jobs:
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKQ_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_ARKQ_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_ARKQ_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKW_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_ARKW_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_ARKW_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_ARKG_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_ARKX_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_ARKX_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_ARKX_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_PRNT_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_PRNT_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_PRNT_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
           http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_INNOVATION_ETF_IZRL_HOLDINGS.csv
-          downloaded_filename: ARK_INNOVATION_ETF_IZRL_HOLDINGS.csv
+          downloaded_filename: raw/ARK_INNOVATION_ETF_IZRL_HOLDINGS.csv
           axios_config: query.json
+          postprocess: ./postprocess.js
