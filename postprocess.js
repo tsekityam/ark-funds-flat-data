@@ -2,7 +2,7 @@ import { CsvFile } from "https://deno.land/x/csv_file/mod.ts";
 import { default as isValid } from "https://deno.land/x/date_fns/isValid/index.js";
 import * as path from "https://deno.land/std/path/mod.ts";
 
-const filename = "raw/ARK_INNOVATION_ETF_ARKK_HOLDINGS.csv";
+const filename = Deno.args[0];
 
 const input = new CsvFile(
   await Deno.open(filename, {
