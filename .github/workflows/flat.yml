@@ -73,3 +73,10 @@ jobs:
           downloaded_filename: raw/ARK_INNOVATION_ETF_IZRL_HOLDINGS.csv
           axios_config: query.json
           postprocess: ./postprocess.js
+      - name: Fetch data
+        uses: githubocto/flat@v3
+        with:
+          http_url: https://ark-funds.com/wp-content/uploads/funds-etf-csv/ARK_TRANSPARENCY_ETF_CTRU_HOLDINGS.csv
+          downloaded_filename: raw/ARK_TRANSPARENCY_ETF_CTRU_HOLDINGS.csv
+          axios_config: query.json
+          postprocess: ./postprocess.js
